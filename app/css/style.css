@@ -1,0 +1,84 @@
+* {font-family: "Helvetica"; }
+body {background: url(../images/bg.jpg);}
+a {border-bottom: none;}
+button, 
+button:active, 
+button:focus {
+    outline: none;
+}
+
+.appContainer {position: fixed; height: 100%; width: 100%;}
+.mainContent {height: calc(100% - 57px);}
+
+/* Popup */
+.mainContentWrap {position: absolute; width: 100%; height: 100%;}
+.menuPopup {position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: white;}
+.menuPopup ul {width:200px; margin: 20px auto; list-style: none;}
+.menuPopup ul li a {color: #999; font-size: 20px;}
+.menuPopup ul li a:hover {text-decoration: none;}
+
+/* Header */
+.navbar-header {float: left;}
+.navbar-nav {float: right;}
+.bj-nav .collapse {border: none; display: block;}
+.bj-nav .collapse li {display: inline-block;}
+.bj-nav .collapse li a {color: white; font-weight: bold; cursor: pointer;}
+.bj-nav {background: #fff; border: none; margin: 0;}
+.navbar-inverse {background: #161616;}
+
+/* Table */
+.table {text-align: center; height: calc(100% - 90px); margin: 0; color: white; font-weight: bold;}
+.cardContainer {display: inline-block; position: relative; height: 38%;}
+.cardInContainer {display: inline-block; text-align: center; height: 100%;}
+.cardInContainer .cardDescription {height: 20px; line-height: 20px;}
+.cardInContainer img {height: calc(100% - 20px);}
+
+.hitBtn {
+	position: absolute; 
+	top: 55%; right: -60px;
+	width: 51px; height: 67px;
+	margin-top: -34px;
+	border: none;
+	background: url(../images/hitBtn.png) no-repeat;
+}
+@media (max-height: 580px) {
+	.hitBtn {
+		top: 55%; right: -45px;
+		width: 36px; height: 52px;
+		margin-top: -26px;
+		background-size: 36px 52px;
+	}
+}
+@media (max-height: 350px) {
+	.hitBtn {
+		top: 55%; right: -45px;
+		width: 31px; height: 47px;
+		margin-top: -24px;
+		background-size: 31px 47px;
+	}
+}
+
+.bank {height: 14%; font-size:115%; line-height: 500%;}
+.totalPoints {height: 10%; font-size: 100%; line-height: 300%;}
+.buttonsPanel {height: 70px; padding: 10px; width: 100%; position: fixed; bottom: 0; left: 0;}
+.leftBtnPanel {float: left; height: 100%;}
+.rightBtnPanel {float: right; height: 100%;}
+.standBtn i {color: #30a750;}
+
+
+@media (max-height: 350px) {
+	.table {height: calc(100% - 60px);}
+	.buttonsPanel {height: 60px;}
+	.bank {line-height: 200%;}
+}
+
+.buttonsPanel button {
+	background: #fff; 
+	border: 2px solid rgba(0,0,0,.6);
+	color: black;
+	height: 100%;
+	padding: 10px 20px;
+	border-radius: 5px;
+	font-weight: bold;
+}
+.buttonsPanel button[disabled] {opacity: .3;}
