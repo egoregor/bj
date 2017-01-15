@@ -8,7 +8,7 @@
   function blackjack($scope, $rootScope, $state, $touch, $window) {
     var vm = this;
 
-	angular.element($window).bind('resize', function(){
+    angular.element($window).bind('resize', function(){
         angular.element(".cardInContainer").width(angular.element(".cardInContainer img").width() + 'px');
      });
   }

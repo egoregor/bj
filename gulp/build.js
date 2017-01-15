@@ -34,9 +34,9 @@ gulp.task('html', ['inject', 'partials'], function () {
     addRootSlash: false
   };
 
-  var htmlFilter = $.filter('**/*.html', { restore: true });
-  var jsFilter = $.filter('**/*.js', { restore: true });
-  var cssFilter = $.filter('**/*.css', { restore: true });
+  var htmlFilter = $.filter(conf.paths.src +'/**/*.html', { restore: true });
+  var jsFilter = $.filter(conf.paths.src + '/**/*.js', { restore: true });
+  var cssFilter = $.filter(conf.paths.src + '/**/*.css', { restore: true });
 
   return gulp.src([path.join(conf.paths.tmp, '/serve/*.html')])
     .pipe($.inject(partialsInjectFile, partialsInjectOptions))
@@ -86,6 +86,11 @@ gulp.task('fonts', function () {
     .pipe($.filter('**/*.{eot,otf,svg,ttf,woff,woff2}'))
     .pipe($.flatten())
     .pipe(gulp.dest(path.join(conf.paths.dist, '/fonts/')));
+});
+
+gulp.task('minify-css', function () {
+    gulp.src(conf.paths.src + '/**/*.css')
+    .pipe(gulp.dest(conf.paths.dist));
 });
 
 gulp.task('other', function () {

@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app="blackjack">
+<html>
   <head>
     <meta charset="utf-8">
     <title>blackjack</title>
@@ -7,34 +7,44 @@
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-    <!-- build:css({.tmp/serve,src}) styles/vendor.css -->
+    <!-- build:css({.tmp/serve,app}) styles/vendor.css -->
     <!-- bower:css -->
     <!-- run `gulp inject` to automatically populate bower styles dependencies -->
     <!-- endbower -->
     <!-- endbuild -->
 
-    <!-- build:css({.tmp/serve,src}) styles/app.css -->
+    <!-- build:css({.tmp/serve,app}) styles/app.css -->
     <!-- inject:css -->
     <!-- css files will be automatically insert here -->
     <!-- endinject -->
     <!-- endbuild -->
   </head>
-  <body ng-controller="MainCtrl">
+  <body ng-controller="MainCtrl" ng-app="blackjack">
     <div class="appContainer">
     <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-
-        <nav class="navbar navbar-inverse bj-nav">
+        <nav class="navbar navbar-inverse bj-nav navbar-fixed-top">
+            <div class="chipsTotal"><span>1000</span></div>
             <div class="navbar-header">
-              <a class="navbar-brand" href="#"><img src="images/logo.png" alt=""></a>
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#"><img src="images/logo.png" alt=""> <span>Bit21</span></a>
             </div>
-            <div class="collapse navbar-collapse">
-              <ul class="nav navbar-nav">
-                <li class=""><a>About</a></li>
-                <li><a ng-click="isOpenPopup = true">Menu</a></li>
-              </ul>
-            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="navbar-form navbar-right">
+                <div class="form-group">
+                  <li class=""><a>About</a></li>
+                </div>
+                <div class="form-group">
+                  <li><a ng-click="isOpenPopup = true">Menu</a></li>
+                </div>
+              </form>
+            </div><!--/.navbar-collapse -->
         </nav>
         
         <div class="mainContentWrap">
@@ -42,13 +52,13 @@
         </div>
         
     </div>
-    <!-- build:js(src) scripts/vendor.js -->
+    <!-- build:js(app) scripts/vendor.js -->
     <!-- bower:js -->
     <!-- run `gulp inject` to automatically populate bower script dependencies -->
     <!-- endbower -->
     <!-- endbuild -->
 
-    <!-- build:js({.tmp/serve,.tmp/partials,src}) scripts/app.js -->
+    <!-- build:js({.tmp/serve,.tmp/partials,app}) scripts/app.js -->
     <!-- inject:js -->
     <!-- js files will be automatically insert here -->
     <!-- endinject -->
@@ -59,8 +69,6 @@
     <!-- endbuild -->
 
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-    <script>
     
-    </script>
   </body>
 </html>

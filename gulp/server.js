@@ -38,6 +38,7 @@ function browserSyncInit(baseDir, browser) {
   browserSync.instance = browserSync.init({
     startPath: '/',
     server: server,
+    // tunnel: true,
     browser: browser
   });
 }

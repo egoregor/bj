@@ -10,8 +10,8 @@
     $stateProvider
       .state('home', {
         url: '/',
-        templateUrl: 'views/home.html',
-        controller: 'MainCtrl',
+        templateUrl: 'views/blackjack.html',
+        controller: 'BlackjackCtrl',
         controllerAs: 'vm'
       })
       .state('blackjack', {
