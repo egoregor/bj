@@ -8,7 +8,11 @@ button:focus {
 }
 
 .appContainer {position: fixed; height: calc(100% - 55px); width: 100%; margin-top: 55px;}
-.mainContent {height: calc(100% - 60px);}
+.mainContent {
+	height: calc(100% - 60px);
+	padding: 0;
+	margin: 0; width: 100%;
+}
 
 /* Popup */
 .mainContentWrap {position: absolute; width: 100%; height: 100%;}
@@ -18,7 +22,7 @@ button:focus {
 .menuPopup ul li a:hover {text-decoration: none;}
 
 /* Header */
-.bj-nav {padding-right: 15px; text-align: center;}
+.bj-nav {padding-right: 15px; text-align: center; background: #000; height: 55px;}
 .bj-nav li {display: inline-block;}
 .bj-nav li a {
 	padding-left: 10px;
@@ -44,7 +48,7 @@ button:focus {
 .chipsTotal {line-height: 34px; margin-right: -15px; position: absolute; width: 100%;}
 .chipsTotal span {
 	vertical-align: middle; 
-	line-height: 50px; 
+	line-height: 55px; 
 	font-size: 18px; 
 	background: url(../images/chip.png) no-repeat; 
 	padding-left: 21px;
@@ -52,41 +56,126 @@ button:focus {
 }
 
 /* Table */
-.table {text-align: center; height: calc(100% - 90px); margin: 0; color: white; font-weight: bold;}
-.cardContainer {display: block; position: relative; height: 50%;}
-.cardInContainer {display: inline-block; text-align: center; height: 100%;}
+
+.tableWrap {
+	position: relative;
+	height: calc(100% - 20px);
+	padding-top: 20px;
+	margin-bottom: 20px;
+	opacity: 0;
+	background-size: auto 100%;
+}
+.table {
+	position: relative;
+	text-align: center; 
+	height: 80%; 
+	margin: 0; 
+	color: white; 
+	font-weight: bold;
+	z-index: 10;
+}
+
+/* Cards */
+
+.deckBoxWrap,
+.deckFoldedWrap {
+	position: absolute;
+	left: 60%; top: -9%;
+	z-index: 10;
+	height: 32%;
+}
+.deckBoxWrap img,
+.deckFoldedWrap img {height: 100%;}
+.deckFoldedWrap {left: 28%; top: -4%; height: 26%;}
+
+.cardContainer {display: block; position: relative; height: calc(50% - 45px - 10px);} /* - bubble block; margin between cards; */
+.aiCardContainer {margin-bottom: 20px;}
+.cardInContainer {display: inline-block; text-align: center; height: 100%; opacity: 0;}
 .cardInContainer img {height: 100%;}
 
-.hitBtn {
-	position: absolute; 
-	top: 55%; right: -60px;
-	width: 51px; height: 67px;
-	margin-top: -34px;
-	border: none;
-	background: url(../images/hitBtn.png) no-repeat;
-}
-@media (max-height: 580px) {
-	.hitBtn {
-		top: 55%; right: -45px;
-		width: 36px; height: 52px;
-		margin-top: -26px;
-		background-size: 36px 52px;
-	}
-}
-@media (max-height: 350px) {
-	.hitBtn {
-		top: 55%; right: -45px;
-		width: 31px; height: 47px;
-		margin-top: -24px;
-		background-size: 31px 47px;
-	}
-}
+
+.createdCardTemp {position: fixed; z-index: 15; opacity: 0; display: inline-block;}
+
+/* -------- */
 
 .buttonsPanel {height: 70px; padding: 10px; width: 100%; position: fixed; bottom: 0; left: 0; text-align: center;}
-.leftBtnPanel {float: left; height: 100%;}
-.rightBtnPanel {float: right; height: 100%;}
-.standBtn i {color: #30a750;}
+.standBtn .checkIcon {color: #30a750;}
 
+.pointsBubble {
+	position: relative;
+	background: #ffd200; 
+	border-radius: 8px;
+	display: inline-block;
+	font-weight: bold;
+	font-size: 17px;
+	line-height: 28px;
+	text-shadow: 1px 1px 2px rgba(150, 150, 150, 1);
+	padding: 0 12px;
+	margin-bottom: 15px;
+}
+.pointsBubble:after {
+	top: 98%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(136, 183, 213, 0);
+	border-top-color: #ffd200;
+	border-width: 8px;
+	margin-left: -8px;
+}
+.pointsBubble-player {
+	margin-top: 15px;
+	margin-bottom: 0;
+}
+.pointsBubble-player:after {
+	bottom: 98%;
+	left: 50%;
+	top: auto;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(136, 183, 213, 0);
+	border-bottom-color: #ffd200;
+	border-width: 8px;
+	margin-left: -8px;
+}
+
+
+.tableBgWrap {
+	position: absolute;
+	top: 0; left: 50%;
+	height: 100%;
+	z-index: 1;
+}
+.tableBgImg {height: 100%;}
+.chipBet {
+	position: absolute;
+	background: transparent;
+	border: none;
+	padding: 0;
+	height: 10%;
+	left: 33%; bottom: 4%;
+}
+.bet-1 {bottom: 7%;}
+.bet-5 {left: 39%; bottom: 5%;}
+.bet-25 {left: 45%;}
+.bet-100 {left: 51%;}
+
+.betPoints {
+	background: url(../images/bet-final.png) no-repeat left center;
+	position: absolute;
+	bottom: 18%; left: 33%;
+    padding-left: 40px;
+    line-height: 45px;
+    font-size: 18px;
+}
 
 @media (max-height: 350px) {
 	.table {height: calc(100% - 60px);}
@@ -104,3 +193,10 @@ button:focus {
 	margin: 0 3px;
 }
 .buttonsPanel button[disabled] {opacity: .3;}
+
+@media (max-width: 380px) {
+	.buttonsPanel button {
+		height: 85%;
+		padding: 10px 12px;
+	}
+}

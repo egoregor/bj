@@ -1,32 +1,57 @@
-<div class="table">
-	<div class="aiCardContainer cardContainer">
-		<div class="cardInContainer">
-			<!-- <div class="cardDescription">11 or 1</div> -->
-			<img src="images/cards/ace.png" alt="">
+<div class="tableWrap">
+	<div class="table">
+		<div>
+			<div class="pointsBubble">1/11</div>
 		</div>
-		<div class="cardInContainer">
-			<img src="images/cards/cardBack.png" alt="">
-		</div>		
-	</div>
-	<!-- <div class="bank">10$</div> -->
-	<div class="playerCardContainer cardContainer">
-		<div class="cardInContainer">
-			<!-- <div class="cardDescription">11 or 1</div> -->
-			<img src="images/cards/ace.png" alt="">
-		</div>
-		<div class="cardInContainer">
-			<img src="images/cards/ace.png" alt="">
-		</div>	
 
-		<!-- <button class="hitBtn"></button> -->
+		<div class="aiCardContainer cardContainer">
+			<div card 
+				 class="cardInContainer cardInAiContainer{{$index}}"
+				 index="$index"
+				 type="'ai'"
+				 ng-repeat="aiCard in vm.aiCards">
+			</div>
+			<!-- <div class="cardInContainer cardInAiContainer{{$index}}" ng-repeat="aiCard in vm.aiCards">
+				<img src="images/cards/ace.png" alt="">
+			</div>	 -->
+		</div>
+
+		<div class="playerCardContainer cardContainer">
+			<div card 
+				 class="cardInContainer cardInPlayerContainer{{$index}}"
+				 index="$index"
+				 type="'player'"
+				 ng-repeat="playerCard in vm.playerCards">
+			</div>
+			<!-- <div class="cardInContainer cardInPlayerContainer{{$index}}" ng-repeat="playerCard in vm.playerCards">
+				<img src="images/cards/ace.png" alt="">
+			</div> -->
+		</div>
+
+		<div>
+			<div class="pointsBubble pointsBubble-player">9</div>
+		</div>
 	</div>
-	<!-- <div class="totalPoints">total: 11</div> -->
+	<div class="tableBgWrap">
+			<div class="deckBoxWrap">
+				<img src="images/deckBox.png" alt="">
+			</div>
+			<div class="deckFoldedWrap">
+				<img src="images/deckFolded.png" alt="">
+			</div>
+			<img class="tableBgImg" src="images/tableBg.png" alt="">
+			<img class="chipBet bet-1" src="images/bet-1.png" alt="">
+			<img class="chipBet bet-5" src="images/bet-5.png" alt="">
+			<img class="chipBet bet-25" src="images/bet-25.png" alt="">
+			<img class="chipBet bet-100" src="images/bet-100.png" alt="">
+			<span class="betPoints">1</span>
+	</div>
 </div>
 <div class="buttonsPanel">
 		<button class="splitBtn" ng-disabled="true">Split</button>
 		<button class="doubleBtn" ng-disabled="true">Double</button>
-		<button class="standBtn">Hit</button>
-		<button class="standBtn"><i class="fa fa-check" aria-hidden="true"></i> Stand</button>
+		<button class="standBtn" ng-click="vm.createNewCard()">Hit</button>
+		<button class="standBtn"><i class="fa fa-check checkIcon" aria-hidden="true"></i> Stand</button>
 </div>
 <!-- <popup-menu></popup-menu> -->
 <!-- <div ng-include="popupTemplate.html"></div> -->
