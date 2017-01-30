@@ -5,11 +5,14 @@
 		</div>
 
 		<div class="aiCardContainer cardContainer">
-			<div card 
-				 class="cardInContainer cardInAiContainer{{$index}}"
-				 index="$index"
-				 type="'ai'"
-				 ng-repeat="aiCard in vm.aiCards">
+			<div class="cardsWrap">
+				<div card 
+					 class="cardInContainer cardInAiContainer{{$index}}"
+					 index="$index"
+					 type="'ai'"
+					 suit="aiCard.suit"
+					 ng-repeat="aiCard in vm.aiCards">
+				</div>
 			</div>
 			<!-- <div class="cardInContainer cardInAiContainer{{$index}}" ng-repeat="aiCard in vm.aiCards">
 				<img src="images/cards/ace.png" alt="">
@@ -17,11 +20,14 @@
 		</div>
 
 		<div class="playerCardContainer cardContainer">
-			<div card 
-				 class="cardInContainer cardInPlayerContainer{{$index}}"
-				 index="$index"
-				 type="'player'"
-				 ng-repeat="playerCard in vm.playerCards">
+			<div class="cardsWrap">
+				<div card 
+					 class="cardInContainer cardInPlayerContainer{{$index}}"
+					 index="$index"
+					 type="'player'"
+					 suit="playerCard.suit"
+					 ng-repeat="playerCard in vm.playerCards">
+				</div>
 			</div>
 			<!-- <div class="cardInContainer cardInPlayerContainer{{$index}}" ng-repeat="playerCard in vm.playerCards">
 				<img src="images/cards/ace.png" alt="">
@@ -50,8 +56,8 @@
 <div class="buttonsPanel">
 		<button class="splitBtn" ng-disabled="true">Split</button>
 		<button class="doubleBtn" ng-disabled="true">Double</button>
-		<button class="standBtn" ng-click="vm.createNewCard()">Hit</button>
-		<button class="standBtn"><i class="fa fa-check checkIcon" aria-hidden="true"></i> Stand</button>
+		<button class="standBtn" ng-click="vm.createNewCardPlayer()">Hit</button>
+		<button class="standBtn" ng-click="vm.aiCardsAll()"><i class="fa fa-check checkIcon" aria-hidden="true"></i> Stand</button>
 </div>
 <!-- <popup-menu></popup-menu> -->
 <!-- <div ng-include="popupTemplate.html"></div> -->

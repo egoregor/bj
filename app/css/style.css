@@ -90,11 +90,31 @@ button:focus {
 
 .cardContainer {display: block; position: relative; height: calc(50% - 45px - 10px);} /* - bubble block; margin between cards; */
 .aiCardContainer {margin-bottom: 20px;}
-.cardInContainer {display: inline-block; text-align: center; height: 100%; opacity: 0;}
-.cardInContainer img {height: 100%;}
+.cardInContainer {
+	display: inline-block; 
+	text-align: center; 
+	height: 100%; 
+	opacity: 0;
+	border-radius: 5px;
+	-webkit-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.1);
+	-moz-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.1);
+	box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.1);
+}
+.cardInContainer .cardImage {
+	height: 100%;
+	border-radius: 5px;
+}
+.cardClosed {	
+	background: url(../images/cardBack.png) no-repeat;
+	background-size: 100% 100%;
+}
+/*.cardInContainer img {height: 100%;}*/
+.cardsWrap {display: inline-block; height: 100%; position: relative;}
+.moreThenTwoCards {width: 20px !important; overflow: hidden;}
+.moreThenTwoCards:first-child {margin-left: 0;}
 
 
-.createdCardTemp {position: fixed; z-index: 15; opacity: 0; display: inline-block;}
+.createdCardTemp {position: fixed; z-index: 15; opacity: .3; display: inline-block; transform: rotateY(0deg); border-spacing: 0px;}
 
 /* -------- */
 
