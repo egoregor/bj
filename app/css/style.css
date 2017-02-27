@@ -96,13 +96,14 @@ button:focus {
 	height: 100%; 
 	opacity: 0;
 	border-radius: 5px;
-	-webkit-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.1);
-	-moz-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.1);
-	box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.1);
+	margin: 0 1px;
 }
 .cardInContainer .cardImage {
 	height: 100%;
 	border-radius: 5px;
+	-webkit-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.2);
+	box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.2);
 }
 .cardClosed {	
 	background: url(../images/cardBack.png) no-repeat;
@@ -115,6 +116,20 @@ button:focus {
 
 
 .createdCardTemp {position: fixed; z-index: 15; opacity: .3; display: inline-block; transform: rotateY(0deg); border-spacing: 0px;}
+.createdCardTempExit {
+	position: fixed; 
+	z-index: 15; 
+	opacity: 1; 
+	display: inline-block; 
+	transform: rotateY(0deg);
+	background: url(../images/cardsSprite.png) no-repeat;
+	background-size: 1300% 500%;
+	background-position: 0 100%;
+	border-radius: 5px;
+	-webkit-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.2);
+	box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.2);
+}
 
 /* -------- */
 
@@ -182,13 +197,16 @@ button:focus {
 	padding: 0;
 	height: 10%;
 	left: 33%; bottom: 4%;
+	cursor: pointer;
 }
+.chipBet.chipBetIsDisabled {opacity: .4; cursor: default;}
 .bet-1 {bottom: 7%;}
 .bet-5 {left: 39%; bottom: 5%;}
 .bet-25 {left: 45%;}
 .bet-100 {left: 51%;}
 
 .betPoints {
+	display: inline-block;
 	background: url(../images/bet-final.png) no-repeat left center;
 	position: absolute;
 	bottom: 18%; left: 33%;
@@ -197,11 +215,20 @@ button:focus {
     font-size: 18px;
 }
 
+.tempChipBet {
+	position: fixed; 
+	display: inline-block;
+	z-index: 15; 
+	opacity: 1; 
+}
+.tempChipBet img {height: 100%;}
+
 @media (max-height: 350px) {
 	.table {height: calc(100% - 60px);}
 	.buttonsPanel {height: 60px;}
 }
 
+.buttonsPanel {opacity: 0;}
 .buttonsPanel button {
 	background: #fff; 
 	border: none;

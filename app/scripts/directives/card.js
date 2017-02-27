@@ -10,7 +10,8 @@ function card() {
     scope: {
     	index: '=',
     	type: '=',
-      suit: '='
+      suit: '=',
+      length: '='
     },
     link: function(scope, elem, attr) {
     	var tempCardStyle = 'style="top:' + $('.deckBoxWrap').offset().top + 'px; left:' + $('.deckBoxWrap').offset().left + 'px; height:' + $('.deckBoxWrap').height() + 'px;"';
@@ -45,40 +46,9 @@ function card() {
           duration: 200,
           easing: 'linear',
           complete: function(){
-            $(elem).css({
-              opacity: 1
-            });
-            $(elem).find(".cardImage").addClass(scope.suit);
-            
+            $(elem).css('opacity', 1)
+            .find(".cardImage").addClass(scope.suit);            
             $(".createdCardTemp" + scope.index).remove();
-              // $(this).animate({
-              //   borderSpacing: -90
-              // }, {
-              //   duration: 100,
-              //   easing: 'linear',
-              //   step: function(now,fx) {
-              //     console.log(now);
-              //     $(this).css('-webkit-transform','rotateY('+now+'deg)'); 
-              //   },
-              //   complete: function(){
-              //     $(this).remove();
-              //     $(elem).css({
-              //       opacity: 1,
-              //       transform: 'rotateY(90deg)',
-              //       borderSpacing: -90
-              //     })
-              //     .animate({
-              //       borderSpacing: 0
-              //     }, {
-              //       duration: 100,
-              //       easing: 'linear',
-              //       step: function(now,fx) {
-              //         console.log(now);
-              //         $(this).css('-webkit-transform','rotateY('+now+'deg)'); 
-              //       },
-              //     });
-              //   }
-              // })
           }
         });
       }, 2);
