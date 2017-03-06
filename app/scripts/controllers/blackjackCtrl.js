@@ -9,14 +9,14 @@
     var vm = this;
 
 
-      Api.save({}, {section: 'blackjack', cmd: 'restore'}).then(
-        function(res){
-          console.log(res);
-        },
-        function(err){
-          console.log(err);
-        }
-      )
+    Api.save({section: 'blackjack', cmd: 'restore'}).then(
+      function(res){
+        console.log(res);
+      },
+      function(err){
+        console.log(err);
+      }
+    )
 
     vm.betValue = 0;
     vm.chipBetIsDisabled = false;
@@ -41,8 +41,12 @@
         angular.element(".buttonsPanel").css('opacity', 1);
     }, 1000);
 
+    vm.getChipImg = function(value) {
+      return 'images/bet-' + value + '.png';
+    }
+
     vm.createNewCardPlayer = function() {
-      vm.playerCards.push({suit: 'd_a'});
+      vm.playerCards.push({suit: 'diamonds_A'});
     }
     vm.createNewCardAi = function(card) {
       vm.aiCards.push(card);
@@ -76,11 +80,12 @@
 
     vm.deal = function(){
       vm.stage = 'deal';
-      vm.aiCards[1].suit = 's_4';
+      vm.aiCards[1].suit = 'spades_4';
       $('.aiCardContainer .cardInContainer:nth-child(2)').find(".cardImage").addClass(vm.aiCards[1].suit);
-      vm.tempCardsAi = [{suit: 'd_a', index: 2},{suit: 's_j', index: 3},{suit: 'h_7', index: 4}];
+      vm.tempCardsAi = [{suit: 'diamonds_A', index: 2},{suit: 'spades_J', index: 3},{suit: 'hearts_7', index: 4}];
       vm.aiCardsAdd();
     }
+
     vm.game = function(){
       vm.startGame = true;
       if (vm.aiCards.length != 0 && vm.playerCards.length != 0) {
@@ -89,8 +94,8 @@
       else {
         vm.stage = 'game';
         vm.betValue = 0;
-        vm.tempCardsAi = [{suit: 'd_a', index: 0},{index: 1}];
-        vm.tempCardsPlayer = [{suit: 'c_q', index: 0}, {suit: 'd_a', index: 1}];
+        vm.tempCardsAi = [{suit: 'diamonds_A', index: 0},{index: 1}];
+        vm.tempCardsPlayer = [{suit: 'clubs_Q', index: 0}, {suit: 'diamonds_A', index: 1}];
         vm.aiCardsAdd();
       }
     }

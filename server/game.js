@@ -143,7 +143,7 @@ class Game {
         const dealerCards = this.state.deck.splice(this.state.deck.length - 1, 1)
         const dealerHoleCard = this.state.deck.splice(this.state.deck.length - 1, 1)[ 0 ]
         const dealerValue = engine.calculate(dealerCards)
-        let dealerHasBlackjack = engine.calculate(dealerCards.concat([dealerHoleCard])).hi === 21
+        let dealerHasBlackjack = engine.isBlackjack(dealerCards.concat([dealerHoleCard]))
         const handInfo = this.enforceRules(engine.getHandInfoAfterDeal(playerCards, dealerCards, bet))
         if (insurance && dealerValue.lo === 1) {
           dealerHasBlackjack = false
@@ -200,7 +200,7 @@ class Game {
       case TYPES.INSURANCE: {
         const { bet = 0 } = action.payload
         const { handInfo, dealerCards, dealerHoleCard, initialBet, history, hits } = this.state
-        const dealerHasBlackjack = engine.calculate(dealerCards.concat([dealerHoleCard])).hi === 21
+        const dealerHasBlackjack = engine.isBlackjack(dealerCards.concat([dealerHoleCard]))
         const insuranceValue = bet > initialBet / 2 ? initialBet / 2 : bet
         handInfo.right = this.enforceRules(engine.getHandInfoAfterInsurance(handInfo.right.cards, dealerCards, insuranceValue || 0))
         handInfo.right.bet = initialBet
@@ -268,10 +268,10 @@ class Game {
         const position = action.payload.position
         const card = deck.splice(deck.length - 1, 1)
         let playerCards = null
-        // TODO: remove position and replace it with stage info #hit
+        const hasSplit = history.some(x => x.type === TYPES.SPLIT)
         if (position === TYPES.LEFT) {
           playerCards = handInfo.left.cards.concat(card)
-          handInfo.left = engine.getHandInfoAfterHit(playerCards, dealerCards, initialBet)
+          handInfo.left = engine.getHandInfoAfterHit(playerCards, dealerCards, initialBet, hasSplit)
           if (handInfo.left.close) {
             stage = TYPES.STAGE_SHOWDOWN
           } else {
@@ -279,7 +279,7 @@ class Game {
           }
         } else {
           playerCards = handInfo.right.cards.concat(card)
-          handInfo.right = engine.getHandInfoAfterHit(playerCards, dealerCards, initialBet)
+          handInfo.right = engine.getHandInfoAfterHit(playerCards, dealerCards, initialBet, hasSplit)
           if (handInfo.right.close) {
             if (history.some(x => x.type === TYPES.SPLIT)) {
               stage = TYPES.STAGE_PLAYER_TURN_LEFT
@@ -418,6 +418,12 @@ class Game {
           }, engine.getPrizes(this.state)))
           break
         }
+        if (checkLeftStatus && handInfo.left.playerHasBusted && handInfo.right.playerHasBusted) {
+          this.setState(Object.assign({
+            stage: TYPES.STAGE_DONE
+          }, engine.getPrizes(this.state)))
+          break
+        }
         while(this.getState().stage === TYPES.STAGE_DEALER_TURN){
           this._dispatch(actions.dealerHit())
         }
@@ -445,7 +451,7 @@ class Game {
         const card = dealerHoleCard || deck.splice(deck.length - 1, 1)[ 0 ]
         const dealerCards = this.state.dealerCards.concat([card])
         const dealerValue = engine.calculate(dealerCards)
-        const dealerHasBlackjack = dealerValue.hi === 21
+        const dealerHasBlackjack = engine.isBlackjack(dealerCards)
         const dealerHasBusted = dealerValue.hi > 21
         let stage = null
         if (dealerValue.hi < 17) {

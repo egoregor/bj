@@ -40,7 +40,7 @@
 				<img src="images/deckFolded.png" alt="">
 			</div>
 			<img class="tableBgImg" src="images/tableBg.png" alt="">
-			<img class="chipBet bet-{{::chipImg}} {{vm.stage == 'game' ? 'chipBetIsDisabled' : ''}}" ng-click="vm.bet(chipImg)" src="images/bet-{{::chipImg}}.png" alt="" ng-repeat="chipImg in [1,5,25,100]">
+			<img class="chipBet bet-{{::chipImg}} {{vm.stage == 'game' ? 'chipBetIsDisabled' : ''}}" ng-click="vm.bet(chipImg)" ng-src="{{vm.getChipImg(chipImg)}}" alt="" ng-repeat="chipImg in [1,5,25,100]">
 			<!-- <img class="chipBet bet-1 {{vm.stage != 'game' ? 'chipBetIsDisabled' : ''}}" ng-click="vm.bet(1)" src="images/bet-1.png" alt="">
 			<img class="chipBet bet-5 {{vm.stage != 'game' ? 'chipBetIsDisabled' : ''}}" ng-click="vm.bet(5)" src="images/bet-5.png" alt="">
 			<img class="chipBet bet-25 {{vm.stage != 'game' ? 'chipBetIsDisabled' : ''}}" ng-click="vm.bet(25)" src="images/bet-25.png" alt="">

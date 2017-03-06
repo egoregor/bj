@@ -10,92 +10,92 @@
 
 /* --------DDDDDDDD-------- */
 
-.d_a {animation: d_a .25s;}
-@-webkit-keyframes d_a {
+.diamonds_A {animation: diamonds_A .25s;}
+@-webkit-keyframes diamonds_A {
   0% {background-position: 0 100%; transform: rotateY(0deg) skewY(0deg);}
   49% {background-position: 0 100%; transform: rotateY(90deg) skewY(-15deg);}
   50% {background-position: 0 0; transform: rotateY(90deg) skewY(15deg);}
   100% {background-position: 0 0; transform: rotateY(0deg) skewY(0deg);}
 }
-.d_k {animation: d_k .25s;}
-@-webkit-keyframes d_k {
+.diamonds_K {animation: diamonds_K .25s;}
+@-webkit-keyframes diamonds_K {
   0% {background-position: 0 100%; transform: rotateY(0deg) skewY(0deg);}
   49% {background-position: 0 100%; transform: rotateY(90deg) skewY(-15deg);}
   51% {background-position: 8.3% 0; transform: rotateY(90deg) skewY(15deg);}
   100% {background-position: 8.3% 0; transform: rotateY(0deg) skewY(0deg);}
 }
-.d_q {animation: d_q .25s;}
-@-webkit-keyframes d_q {
+.diamonds_Q {animation: diamonds_Q .25s;}
+@-webkit-keyframes diamonds_Q {
   0% {background-position: 0 100%; transform: rotateY(0deg) skewY(0deg);}
   49% {background-position: 0 100%; transform: rotateY(90deg) skewY(-15deg);}
   51% {background-position: 16.6% 0; transform: rotateY(90deg) skewY(15deg);}
   100% {background-position: 16.6% 0; transform: rotateY(0deg) skewY(0deg);}
 }
-.d_j {animation: d_j .25s;}
-@-webkit-keyframes d_j {
+.diamonds_J {animation: diamonds_J .25s;}
+@-webkit-keyframes diamonds_J {
   0% {background-position: 0 100%; transform: rotateY(0deg) skewY(0deg);}
   49% {background-position: 0 100%; transform: rotateY(90deg) skewY(-15deg);}
   51% {background-position: 25% 0; transform: rotateY(90deg) skewY(15deg);}
   100% {background-position: 25% 0; transform: rotateY(0deg) skewY(0deg);}
 }
-.d_10 {animation: d_10 .25s;}
-@-webkit-keyframes d_10 {
+.diamonds_10 {animation: diamonds_10 .25s;}
+@-webkit-keyframes diamonds_10 {
   0% {background-position: 0 100%; transform: rotateY(0deg) skewY(0deg);}
   49% {background-position: 0 100%; transform: rotateY(90deg) skewY(-15deg);}
   51% {background-position: 33.3% 0; transform: rotateY(90deg) skewY(15deg);}
   100% {background-position: 33.3% 0; transform: rotateY(0deg) skewY(0deg);}
 }
-.d_9 {animation: d_9 .25s;}
-@-webkit-keyframes d_9 {
+.diamonds_9 {animation: diamonds_9 .25s;}
+@-webkit-keyframes diamonds_9 {
   0% {background-position: 0 100%; transform: rotateY(0deg) skewY(0deg);}
   49% {background-position: 0 100%; transform: rotateY(90deg) skewY(-15deg);}
   51% {background-position: 41.6% 0; transform: rotateY(90deg) skewY(15deg);}
   100% {background-position: 41.6% 0; transform: rotateY(0deg) skewY(0deg);}
 }
-.d_8 {animation: d_8 .25s;}
-@-webkit-keyframes d_8 {
+.diamonds_8 {animation: diamonds_8 .25s;}
+@-webkit-keyframes diamonds_8 {
   0% {background-position: 0 100%; transform: rotateY(0deg) skewY(0deg);}
   49% {background-position: 0 100%; transform: rotateY(90deg) skewY(-15deg);}
   51% {background-position: 50% 0; transform: rotateY(90deg) skewY(15deg);}
   100% {background-position: 50% 0; transform: rotateY(0deg) skewY(0deg);}
 }
-.d_7 {animation: d_7 .25s;}
-@-webkit-keyframes d_7 {
+.diamonds_7 {animation: diamonds_7 .25s;}
+@-webkit-keyframes diamonds_7 {
   0% {background-position: 0 100%; transform: rotateY(0deg) skewY(0deg);}
   49% {background-position: 0 100%; transform: rotateY(90deg) skewY(-15deg);}
   51% {background-position: 58.3% 0; transform: rotateY(90deg) skewY(15deg);}
   100% {background-position: 58.3% 0; transform: rotateY(0deg) skewY(0deg);}
 }
-.d_6 {animation: d_6 .25s;}
-@-webkit-keyframes d_6 {
+.diamonds_6 {animation: diamonds_6 .25s;}
+@-webkit-keyframes diamonds_6 {
   0% {background-position: 0 100%; transform: rotateY(0deg) skewY(0deg);}
   49% {background-position: 0 100%; transform: rotateY(90deg) skewY(-15deg);}
   51% {background-position: 66.6% 0; transform: rotateY(90deg) skewY(15deg);}
   100% {background-position: 66.6% 0; transform: rotateY(0deg) skewY(0deg);}
 }
-.d_5 {animation: d_5 .25s;}
-@-webkit-keyframes d_5 {
+.diamonds_5 {animation: diamonds_5 .25s;}
+@-webkit-keyframes diamonds_5 {
   0% {background-position: 0 100%; transform: rotateY(0deg) skewY(0deg);}
   49% {background-position: 0 100%; transform: rotateY(90deg) skewY(-15deg);}
   51% {background-position: 75% 0; transform: rotateY(90deg) skewY(15deg);}
   100% {background-position: 75% 0; transform: rotateY(0deg) skewY(0deg);}
 }
-.d_4 {animation: d_4 .25s;}
-@-webkit-keyframes d_4 {
+.diamonds_4 {animation: diamonds_4 .25s;}
+@-webkit-keyframes diamonds_4 {
   0% {background-position: 0 100%; transform: rotateY(0deg) skewY(0deg);}
   49% {background-position: 0 100%; transform: rotateY(90deg) skewY(-15deg);}
   51% {background-position: 83.3% 0; transform: rotateY(90deg) skewY(15deg);}
   100% {background-position: 83.3% 0; transform: rotateY(0deg) skewY(0deg);}
 }
-.d_3 {animation: d_3 .25s;}
-@-webkit-keyframes d_3 {
+.diamonds_3 {animation: diamonds_3 .25s;}
+@-webkit-keyframes diamonds_3 {
   0% {background-position: 0 100%; transform: rotateY(0deg) skewY(0deg);}
   49% {background-position: 0 100%; transform: rotateY(90deg) skewY(-15deg);}
   51% {background-position: 91.6% 0; transform: rotateY(90deg) skewY(15deg);}
   100% {background-position: 91.6% 0; transform: rotateY(0deg) skewY(0deg);}
 }
-.d_2 {animation: d_2 .25s;}
-@-webkit-keyframes d_2 {
+.diamonds_2 {animation: diamonds_2 .25s;}
+@-webkit-keyframes diamonds_2 {
   0% {background-position: 0 100%; transform: rotateY(0deg) skewY(0deg);}
   49% {background-position: 0 100%; transform: rotateY(90deg) skewY(-15deg);}
   51% {background-position: 100% 0; transform: rotateY(90deg) skewY(15deg);}
@@ -104,92 +104,92 @@
 
 /* --------HHHHHHHH-------- */
 
-.h_a {animation: h_a .25s;}
-@-webkit-keyframes h_a {
+.hearts_A {animation: hearts_A .25s;}
+@-webkit-keyframes hearts_A {
   0% {background-position: 0 100%; transform: rotateY(0deg) skewY(0deg);}
   49% {background-position: 0 100%; transform: rotateY(90deg) skewY(-15deg);}
   51% {background-position: 0 25%; transform: rotateY(90deg) skewY(15deg);}
   100% {background-position: 0 25%; transform: rotateY(0deg) skewY(0deg);}
 }
-.h_k {animation: h_k .25s;}
-@-webkit-keyframes h_k {
+.hearts_K {animation: hearts_K .25s;}
+@-webkit-keyframes hearts_K {
   0% {background-position: 0 100%; transform: rotateY(0deg) skewY(0deg);}
   49% {background-position: 0 100%; transform: rotateY(90deg) skewY(-15deg);}
   51% {background-position: 8.3% 25%; transform: rotateY(90deg) skewY(15deg);}
   100% {background-position: 8.3% 25%; transform: rotateY(0deg) skewY(0deg);}
 }
-.h_q {animation: h_q .25s;}
-@-webkit-keyframes h_q {
+.hearts_Q {animation: hearts_Q .25s;}
+@-webkit-keyframes hearts_Q {
   0% {background-position: 0 100%; transform: rotateY(0deg) skewY(0deg);}
   49% {background-position: 0 100%; transform: rotateY(90deg) skewY(-15deg);}
   51% {background-position: 16.6% 25%; transform: rotateY(90deg) skewY(15deg);}
   100% {background-position: 16.6% 25%; transform: rotateY(0deg) skewY(0deg);}
 }
-.h_j {animation: h_j .25s;}
-@-webkit-keyframes h_j {
+.hearts_J {animation: hearts_J .25s;}
+@-webkit-keyframes hearts_J {
   0% {background-position: 0 100%; transform: rotateY(0deg) skewY(0deg);}
   49% {background-position: 0 100%; transform: rotateY(90deg) skewY(-15deg);}
   51% {background-position: 25% 25%; transform: rotateY(90deg) skewY(15deg);}
   100% {background-position: 25% 25%; transform: rotateY(0deg) skewY(0deg);}
 }
-.h_10 {animation: h_10 .25s;}
-@-webkit-keyframes h_10 {
+.hearts_10 {animation: hearts_10 .25s;}
+@-webkit-keyframes hearts_10 {
   0% {background-position: 0 100%; transform: rotateY(0deg) skewY(0deg);}
   49% {background-position: 0 100%; transform: rotateY(90deg) skewY(-15deg);}
   51% {background-position: 33.3% 25%; transform: rotateY(90deg) skewY(15deg);}
   100% {background-position: 33.3% 25%; transform: rotateY(0deg) skewY(0deg);}
 }
-.h_9 {animation: h_9 .25s;}
-@-webkit-keyframes h_9 {
+.hearts_9 {animation: hearts_9 .25s;}
+@-webkit-keyframes hearts_9 {
   0% {background-position: 0 100%; transform: rotateY(0deg) skewY(0deg);}
   49% {background-position: 0 100%; transform: rotateY(90deg) skewY(-15deg);}
   51% {background-position: 41.6% 25%; transform: rotateY(90deg) skewY(15deg);}
   100% {background-position: 41.6% 25%; transform: rotateY(0deg) skewY(0deg);}
 }
-.h_8 {animation: h_8 .25s;}
-@-webkit-keyframes h_8 {
+.hearts_8 {animation: hearts_8 .25s;}
+@-webkit-keyframes hearts_8 {
   0% {background-position: 0 100%; transform: rotateY(0deg) skewY(0deg);}
   49% {background-position: 0 100%; transform: rotateY(90deg) skewY(-15deg);}
   51% {background-position: 50% 25%; transform: rotateY(90deg) skewY(15deg);}
   100% {background-position: 50% 25%; transform: rotateY(0deg) skewY(0deg);}
 }
-.h_7 {animation: h_7 .25s;}
-@-webkit-keyframes h_7 {
+.hearts_7 {animation: hearts_7 .25s;}
+@-webkit-keyframes hearts_7 {
   0% {background-position: 0 100%; transform: rotateY(0deg) skewY(0deg);}
   49% {background-position: 0 100%; transform: rotateY(90deg) skewY(-15deg);}
   51% {background-position: 58.3% 25%; transform: rotateY(90deg) skewY(15deg);}
   100% {background-position: 58.3% 25%; transform: rotateY(0deg) skewY(0deg);}
 }
-.h_6 {animation: h_6 .25s;}
-@-webkit-keyframes h_6 {
+.hearts_6 {animation: hearts_6 .25s;}
+@-webkit-keyframes hearts_6 {
   0% {background-position: 0 100%; transform: rotateY(0deg) skewY(0deg);}
   49% {background-position: 0 100%; transform: rotateY(90deg) skewY(-15deg);}
   51% {background-position: 66.6% 25%; transform: rotateY(90deg) skewY(15deg);}
   100% {background-position: 66.6% 25%; transform: rotateY(0deg) skewY(0deg);}
 }
-.h_5 {animation: h_5 .25s;}
-@-webkit-keyframes h_5 {
+.hearts_5 {animation: hearts_5 .25s;}
+@-webkit-keyframes hearts_5 {
   0% {background-position: 0 100%; transform: rotateY(0deg) skewY(0deg);}
   49% {background-position: 0 100%; transform: rotateY(90deg) skewY(-15deg);}
   51% {background-position: 75% 25%; transform: rotateY(90deg) skewY(15deg);}
   100% {background-position: 75% 25%; transform: rotateY(0deg) skewY(0deg);}
 }
-.h_4 {animation: h_4 .25s;}
-@-webkit-keyframes h_4 {
+.hearts_4 {animation: hearts_4 .25s;}
+@-webkit-keyframes hearts_4 {
   0% {background-position: 0 100%; transform: rotateY(0deg) skewY(0deg);}
   49% {background-position: 0 100%; transform: rotateY(90deg) skewY(-15deg);}
   51% {background-position: 83.3% 25%; transform: rotateY(90deg) skewY(15deg);}
   100% {background-position: 83.3% 25%; transform: rotateY(0deg) skewY(0deg);}
 }
-.h_3 {animation: h_3 .25s;}
-@-webkit-keyframes h_3 {
+.hearts_3 {animation: hearts_3 .25s;}
+@-webkit-keyframes hearts_3 {
   0% {background-position: 0 100%; transform: rotateY(0deg) skewY(0deg);}
   49% {background-position: 0 100%; transform: rotateY(90deg) skewY(-15deg);}
   51% {background-position: 91.6% 25%; transform: rotateY(90deg) skewY(15deg);}
   100% {background-position: 91.6% 25%; transform: rotateY(0deg) skewY(0deg);}
 }
-.h_2 {animation: h_2 .25s;}
-@-webkit-keyframes h_2 {
+.hearts_2 {animation: hearts_2 .25s;}
+@-webkit-keyframes hearts_2 {
   0% {background-position: 0 100%; transform: rotateY(0deg) skewY(0deg);}
   49% {background-position: 0 100%; transform: rotateY(90deg) skewY(-15deg);}
   51% {background-position: 100% 25%; transform: rotateY(90deg) skewY(15deg);}
@@ -198,92 +198,92 @@
 
 /* --------CCCCCCCC-------- */
 
-.c_a {animation: c_a .25s;}
-@-webkit-keyframes c_a {
+.clubs_A {animation: clubs_A .25s;}
+@-webkit-keyframes clubs_A {
   0% {background-position: 0 100%; transform: rotateY(0deg) skewY(0deg);}
   49% {background-position: 0 100%; transform: rotateY(90deg) skewY(-15deg);}
   51% {background-position: 0 50%; transform: rotateY(90deg) skewY(15deg);}
   100% {background-position: 0 50%; transform: rotateY(0deg) skewY(0deg);}
 }
-.c_k {animation: c_k .25s;}
-@-webkit-keyframes c_k {
+.clubs_K {animation: clubs_K .25s;}
+@-webkit-keyframes clubs_K {
   0% {background-position: 0 100%; transform: rotateY(0deg) skewY(0deg);}
   49% {background-position: 0 100%; transform: rotateY(90deg) skewY(-15deg);}
   51% {background-position: 8.3% 50%; transform: rotateY(90deg) skewY(15deg);}
   100% {background-position: 8.3% 50%; transform: rotateY(0deg) skewY(0deg);}
 }
-.c_q {animation: c_q .25s;}
-@-webkit-keyframes c_q {
+.clubs_Q {animation: clubs_Q .25s;}
+@-webkit-keyframes clubs_Q {
   0% {background-position: 0 100%; transform: rotateY(0deg) skewY(0deg);}
   49% {background-position: 0 100%; transform: rotateY(90deg) skewY(-15deg);}
   51% {background-position: 16.6% 50%; transform: rotateY(90deg) skewY(15deg);}
   100% {background-position: 16.6% 50%; transform: rotateY(0deg) skewY(0deg);}
 }
-.c_j {animation: c_j .25s;}
-@-webkit-keyframes c_j {
+.clubs_J {animation: clubs_J .25s;}
+@-webkit-keyframes clubs_J {
   0% {background-position: 0 100%; transform: rotateY(0deg) skewY(0deg);}
   49% {background-position: 0 100%; transform: rotateY(90deg) skewY(-15deg);}
   51% {background-position: 25% 50%; transform: rotateY(90deg) skewY(15deg);}
   100% {background-position: 25% 50%; transform: rotateY(0deg) skewY(0deg);}
 }
-.c_10 {animation: c_10 .25s;}
-@-webkit-keyframes c_10 {
+.clubs_10 {animation: clubs_10 .25s;}
+@-webkit-keyframes clubs_10 {
   0% {background-position: 0 100%; transform: rotateY(0deg) skewY(0deg);}
   49% {background-position: 0 100%; transform: rotateY(90deg) skewY(-15deg);}
   51% {background-position: 33.3% 50%; transform: rotateY(90deg) skewY(15deg);}
   100% {background-position: 33.3% 50%; transform: rotateY(0deg) skewY(0deg);}
 }
-.c_9 {animation: c_9 .25s;}
-@-webkit-keyframes c_9 {
+.clubs_9 {animation: clubs_9 .25s;}
+@-webkit-keyframes clubs_9 {
   0% {background-position: 0 100%; transform: rotateY(0deg) skewY(0deg);}
   49% {background-position: 0 100%; transform: rotateY(90deg) skewY(-15deg);}
   51% {background-position: 41.6% 50%; transform: rotateY(90deg) skewY(15deg);}
   100% {background-position: 41.6% 50%; transform: rotateY(0deg) skewY(0deg);}
 }
-.c_8 {animation: c_8 .25s;}
-@-webkit-keyframes c_8 {
+.clubs_8 {animation: clubs_8 .25s;}
+@-webkit-keyframes clubs_8 {
   0% {background-position: 0 100%; transform: rotateY(0deg) skewY(0deg);}
   49% {background-position: 0 100%; transform: rotateY(90deg) skewY(-15deg);}
   51% {background-position: 50% 50%; transform: rotateY(90deg) skewY(15deg);}
   100% {background-position: 50% 50%; transform: rotateY(0deg) skewY(0deg);}
 }
-.c_7 {animation: c_7 .25s;}
-@-webkit-keyframes c_7 {
+.clubs_7 {animation: clubs_7 .25s;}
+@-webkit-keyframes clubs_7 {
   0% {background-position: 0 100%; transform: rotateY(0deg) skewY(0deg);}
   49% {background-position: 0 100%; transform: rotateY(90deg) skewY(-15deg);}
   51% {background-position: 58.3% 50%; transform: rotateY(90deg) skewY(15deg);}
   100% {background-position: 58.3% 50%; transform: rotateY(0deg) skewY(0deg);}
 }
-.c_6 {animation: c_6 .25s;}
-@-webkit-keyframes c_6 {
+.clubs_6 {animation: clubs_6 .25s;}
+@-webkit-keyframes clubs_6 {
   0% {background-position: 0 100%; transform: rotateY(0deg) skewY(0deg);}
   49% {background-position: 0 100%; transform: rotateY(90deg) skewY(-15deg);}
   51% {background-position: 66.6% 50%; transform: rotateY(90deg) skewY(15deg);}
   100% {background-position: 66.6% 50%; transform: rotateY(0deg) skewY(0deg);}
 }
-.c_5 {animation: c_5 .25s;}
-@-webkit-keyframes c_5 {
+.clubs_5 {animation: clubs_5 .25s;}
+@-webkit-keyframes clubs_5 {
   0% {background-position: 0 100%; transform: rotateY(0deg) skewY(0deg);}
   49% {background-position: 0 100%; transform: rotateY(90deg) skewY(-15deg);}
   51% {background-position: 75% 50%; transform: rotateY(90deg) skewY(15deg);}
   100% {background-position: 75% 50%; transform: rotateY(0deg) skewY(0deg);}
 }
-.c_4 {animation: c_4 .25s;}
-@-webkit-keyframes c_4 {
+.clubs_4 {animation: clubs_4 .25s;}
+@-webkit-keyframes clubs_4 {
   0% {background-position: 0 100%; transform: rotateY(0deg) skewY(0deg);}
   49% {background-position: 0 100%; transform: rotateY(90deg) skewY(-15deg);}
   51% {background-position: 83.3% 50%; transform: rotateY(90deg) skewY(15deg);}
   100% {background-position: 83.3% 50%; transform: rotateY(0deg) skewY(0deg);}
 }
-.c_3 {animation: c_3 .25s;}
-@-webkit-keyframes c_3 {
+.clubs_3 {animation: clubs_3 .25s;}
+@-webkit-keyframes clubs_3 {
   0% {background-position: 0 100%; transform: rotateY(0deg) skewY(0deg);}
   49% {background-position: 0 100%; transform: rotateY(90deg) skewY(-15deg);}
   51% {background-position: 91.6% 50%; transform: rotateY(90deg) skewY(15deg);}
   100% {background-position: 91.6% 50%; transform: rotateY(0deg) skewY(0deg);}
 }
-.c_2 {animation: c_2 .25s;}
-@-webkit-keyframes c_2 {
+.clubs_2 {animation: clubs_2 .25s;}
+@-webkit-keyframes clubs_2 {
   0% {background-position: 0 100%; transform: rotateY(0deg) skewY(0deg);}
   49% {background-position: 0 100%; transform: rotateY(90deg) skewY(-15deg);}
   51% {background-position: 100% 50%; transform: rotateY(90deg) skewY(15deg);}
@@ -292,92 +292,92 @@
 
 /* --------SSSSSSSS-------- */
 
-.s_a {animation: s_a .25s;}
-@-webkit-keyframes s_a {
+.spades_A {animation: spades_A .25s;}
+@-webkit-keyframes spades_A {
   0% {background-position: 0 100%; transform: rotateY(0deg) skewY(0deg);}
   49% {background-position: 0 100%; transform: rotateY(90deg) skewY(-15deg);}
   51% {background-position: 0 75%; transform: rotateY(90deg) skewY(15deg);}
   100% {background-position: 0 75%; transform: rotateY(0deg) skewY(0deg);}
 }
-.s_k {animation: s_k .25s;}
-@-webkit-keyframes s_k {
+.spades_K {animation: spades_K .25s;}
+@-webkit-keyframes spades_K {
   0% {background-position: 0 100%; transform: rotateY(0deg) skewY(0deg);}
   49% {background-position: 0 100%; transform: rotateY(90deg) skewY(-15deg);}
   51% {background-position: 8.3% 75%; transform: rotateY(90deg) skewY(15deg);}
   100% {background-position: 8.3% 75%; transform: rotateY(0deg) skewY(0deg);}
 }
-.s_q {animation: s_q .25s;}
-@-webkit-keyframes s_q {
+.spades_Q {animation: spades_Q .25s;}
+@-webkit-keyframes spades_Q {
   0% {background-position: 0 100%; transform: rotateY(0deg) skewY(0deg);}
   49% {background-position: 0 100%; transform: rotateY(90deg) skewY(-15deg);}
   51% {background-position: 16.6% 75%; transform: rotateY(90deg) skewY(15deg);}
   100% {background-position: 16.6% 75%; transform: rotateY(0deg) skewY(0deg);}
 }
-.s_j {animation: s_j .25s;}
-@-webkit-keyframes s_j {
+.spades_J {animation: spades_J .25s;}
+@-webkit-keyframes spades_J {
   0% {background-position: 0 100%; transform: rotateY(0deg) skewY(0deg);}
   49% {background-position: 0 100%; transform: rotateY(90deg) skewY(-15deg);}
   51% {background-position: 25% 75%; transform: rotateY(90deg) skewY(15deg);}
   100% {background-position: 25% 75%; transform: rotateY(0deg) skewY(0deg);}
 }
-.s_10 {animation: s_10 .25s;}
-@-webkit-keyframes s_10 {
+.spades_10 {animation: spades_10 .25s;}
+@-webkit-keyframes spades_10 {
   0% {background-position: 0 100%; transform: rotateY(0deg) skewY(0deg);}
   49% {background-position: 0 100%; transform: rotateY(90deg) skewY(-15deg);}
   51% {background-position: 33.3% 75%; transform: rotateY(90deg) skewY(15deg);}
   100% {background-position: 33.3% 75%; transform: rotateY(0deg) skewY(0deg);}
 }
-.s_9 {animation: s_9 .25s;}
-@-webkit-keyframes s_9 {
+.spades_9 {animation: spades_9 .25s;}
+@-webkit-keyframes spades_9 {
   0% {background-position: 0 100%; transform: rotateY(0deg) skewY(0deg);}
   49% {background-position: 0 100%; transform: rotateY(90deg) skewY(-15deg);}
   51% {background-position: 41.6% 75%; transform: rotateY(90deg) skewY(15deg);}
   100% {background-position: 41.6% 75%; transform: rotateY(0deg) skewY(0deg);}
 }
-.s_8 {animation: s_8 .25s;}
-@-webkit-keyframes s_8 {
+.spades_8 {animation: spades_8 .25s;}
+@-webkit-keyframes spades_8 {
   0% {background-position: 0 100%; transform: rotateY(0deg) skewY(0deg);}
   49% {background-position: 0 100%; transform: rotateY(90deg) skewY(-15deg);}
   51% {background-position: 50% 75%; transform: rotateY(90deg) skewY(15deg);}
   100% {background-position: 50% 75%; transform: rotateY(0deg) skewY(0deg);}
 }
-.s_7 {animation: s_7 .25s;}
-@-webkit-keyframes s_7 {
+.spades_7 {animation: spades_7 .25s;}
+@-webkit-keyframes spades_7 {
   0% {background-position: 0 100%; transform: rotateY(0deg) skewY(0deg);}
   49% {background-position: 0 100%; transform: rotateY(90deg) skewY(-15deg);}
   51% {background-position: 58.3% 75%; transform: rotateY(90deg) skewY(15deg);}
   100% {background-position: 58.3% 75%; transform: rotateY(0deg) skewY(0deg);}
 }
-.s_6 {animation: s_6 .25s;}
-@-webkit-keyframes s_6 {
+.spades_6 {animation: spades_6 .25s;}
+@-webkit-keyframes spades_6 {
   0% {background-position: 0 100%; transform: rotateY(0deg) skewY(0deg);}
   49% {background-position: 0 100%; transform: rotateY(90deg) skewY(-15deg);}
   51% {background-position: 66.6% 75%; transform: rotateY(90deg) skewY(15deg);}
   100% {background-position: 66.6% 75%; transform: rotateY(0deg) skewY(0deg);}
 }
-.s_5 {animation: s_5 .25s;}
-@-webkit-keyframes s_5 {
+.spades_5 {animation: spades_5 .25s;}
+@-webkit-keyframes spades_5 {
   0% {background-position: 0 100%; transform: rotateY(0deg) skewY(0deg);}
   49% {background-position: 0 100%; transform: rotateY(90deg) skewY(-15deg);}
   51% {background-position: 75% 75%; transform: rotateY(90deg) skewY(15deg);}
   100% {background-position: 75% 75%; transform: rotateY(0deg) skewY(0deg);}
 }
-.s_4 {animation: s_4 .25s;}
-@-webkit-keyframes s_4 {
+.spades_4 {animation: spades_4 .25s;}
+@-webkit-keyframes spades_4 {
   0% {background-position: 0 100%; transform: rotateY(0deg) skewY(0deg);}
   49% {background-position: 0 100%; transform: rotateY(90deg) skewY(-15deg);}
   51% {background-position: 83.3% 75%; transform: rotateY(90deg) skewY(15deg);}
   100% {background-position: 83.3% 75%; transform: rotateY(0deg) skewY(0deg);}
 }
-.s_3 {animation: s_3 .25s;}
-@-webkit-keyframes s_3 {
+.spades_3 {animation: spades_3 .25s;}
+@-webkit-keyframes spades_3 {
   0% {background-position: 0 100%; transform: rotateY(0deg) skewY(0deg);}
   49% {background-position: 0 100%; transform: rotateY(90deg) skewY(-15deg);}
   51% {background-position: 91.6% 75%; transform: rotateY(90deg) skewY(15deg);}
   100% {background-position: 91.6% 75%; transform: rotateY(0deg) skewY(0deg);}
 }
-.s_2 {animation: s_2 .25s;}
-@-webkit-keyframes s_2 {
+.spades_2 {animation: spades_2 .25s;}
+@-webkit-keyframes spades_2 {
   0% {background-position: 0 100%; transform: rotateY(0deg) skewY(0deg);}
   49% {background-position: 0 100%; transform: rotateY(90deg) skewY(-15deg);}
   51% {background-position: 100% 75%; transform: rotateY(90deg) skewY(15deg);}
