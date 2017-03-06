@@ -10,8 +10,7 @@ function card() {
     scope: {
     	index: '=',
     	type: '=',
-      suit: '=',
-      length: '='
+      suit: '='
     },
     link: function(scope, elem, attr) {
     	var tempCardStyle = 'style="top:' + $('.deckBoxWrap').offset().top + 'px; left:' + $('.deckBoxWrap').offset().left + 'px; height:' + $('.deckBoxWrap').height() + 'px;"';

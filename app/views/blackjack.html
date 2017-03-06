@@ -10,8 +10,7 @@
 					 class="cardInContainer cardInAiContainer{{$index}}"
 					 index="$index"
 					 type="'ai'"
-					 suit="aiCard.suit"
-					 length='vm.aiCards.length'
+					 suit="::aiCard.suit"
 					 ng-repeat="aiCard in vm.aiCards">
 				</div>
 			</div>
@@ -23,7 +22,7 @@
 					 class="cardInContainer cardInPlayerContainer{{$index}}"
 					 index="$index"
 					 type="'player'"
-					 suit="playerCard.suit"
+					 suit="::playerCard.suit"
 					 ng-repeat="playerCard in vm.playerCards">
 				</div>
 			</div>
@@ -41,10 +40,11 @@
 				<img src="images/deckFolded.png" alt="">
 			</div>
 			<img class="tableBgImg" src="images/tableBg.png" alt="">
-			<img class="chipBet bet-1 {{vm.stage != 'game' ? 'chipBetIsDisabled' : ''}}" ng-click="vm.bet(1)" src="images/bet-1.png" alt="">
+			<img class="chipBet bet-{{::chipImg}} {{vm.stage == 'game' ? 'chipBetIsDisabled' : ''}}" ng-click="vm.bet(chipImg)" src="images/bet-{{::chipImg}}.png" alt="" ng-repeat="chipImg in [1,5,25,100]">
+			<!-- <img class="chipBet bet-1 {{vm.stage != 'game' ? 'chipBetIsDisabled' : ''}}" ng-click="vm.bet(1)" src="images/bet-1.png" alt="">
 			<img class="chipBet bet-5 {{vm.stage != 'game' ? 'chipBetIsDisabled' : ''}}" ng-click="vm.bet(5)" src="images/bet-5.png" alt="">
 			<img class="chipBet bet-25 {{vm.stage != 'game' ? 'chipBetIsDisabled' : ''}}" ng-click="vm.bet(25)" src="images/bet-25.png" alt="">
-			<img class="chipBet bet-100 {{vm.stage != 'game' ? 'chipBetIsDisabled' : ''}}" ng-click="vm.bet(100)" src="images/bet-100.png" alt="">
+			<img class="chipBet bet-100 {{vm.stage != 'game' ? 'chipBetIsDisabled' : ''}}" ng-click="vm.bet(100)" src="images/bet-100.png" alt=""> -->
 			<span class="betPoints" ng-bind='vm.betValue'></span>
 	</div>
 </div>

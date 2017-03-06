@@ -5,8 +5,18 @@
     .module('blackjack').controller('BlackjackCtrl', blackjack);
 
   /** @ngInject */
-  function blackjack($scope, $rootScope, $state, $touch, $window, $timeout) {
+  function blackjack($scope, $rootScope, $state, $touch, $window, $timeout, Api) {
     var vm = this;
+
+
+      Api.save({}, {section: 'blackjack', cmd: 'restore'}).then(
+        function(res){
+          console.log(res);
+        },
+        function(err){
+          console.log(err);
+        }
+      )
 
     vm.betValue = 0;
     vm.chipBetIsDisabled = false;
@@ -57,14 +67,12 @@
     vm.playerCardsAdd = function(){
       if(vm.tempCardsPlayer.length > 0) {
         vm.playerCards.push(vm.tempCardsPlayer[0]);
-        $timeout( function() {
-        }, 500 ).then( function() {
+        $timeout( function() {}, 500 ).then( function() {
           vm.tempCardsPlayer.splice(0, 1);
           vm.playerCardsAdd();
         });
       }
     };
-
 
     vm.deal = function(){
       vm.stage = 'deal';
@@ -88,14 +96,13 @@
     }
 
     vm.bet = function(value) {
-      if (vm.stage == 'game' && !vm.isBetAnimation) {
+      if (vm.stage != 'game' && !vm.isBetAnimation) {
         vm.betValue += value;
         var tempChipBetStyle = 'style="top:' + $('.bet-' + value).offset().top + 'px; left:' + $('.bet-' + value).offset().left + 'px; height:' + $('.bet-' + value).height() + 'px;"';
         var tempChipBet = '<div class="tempChipBet" ' + tempChipBetStyle + '><img src="images/bet-' + value + '.png"></div>';
         $('.table').append(tempChipBet);
 
         vm.isBetAnimation = true;
-        console.log(tempChipBet);
         $('.tempChipBet').animate({
           left: $('.betPoints').offset().left + 5 + 'px',
           top: $('.betPoints').offset().top + 5 + 'px',
@@ -110,7 +117,6 @@
         });
       };
     }
-
 
     vm.removeAllCards = function(){
       $(".aiCardContainer .cardsWrap").children().each(function(index){
@@ -142,7 +148,6 @@
           $('.createdCardTempExit').remove();
           vm.game();
       }, 400);
-
     }
   }
 })();
