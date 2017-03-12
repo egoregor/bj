@@ -2,8 +2,9 @@ const express = require('express')
 const app = express()
 const session = require('express-session')
 const bodyParser = require('body-parser')
-const Game = require('./server/game')
-const actions = require('./server/actions')
+const blackjack = require('engine-blackjack')
+const actions = blackjack.actions
+const Game = blackjack.Game
 
 app.set('port', (process.env.PORT || 5000));
 app.set('trust proxy', 1) // trust first proxy

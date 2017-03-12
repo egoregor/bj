@@ -1,7 +1,12 @@
 <div class="tableWrap">
 	<div class="table">
-		<div ng-show="vm.startGame">
-			<div class="pointsBubble"><span>1/11</span></div>
+		<div>
+			<div class="pointsBubble">
+				<span ng-show="vm.currentTable.dealerValue.low != vm.currentTable.dealerValue.hi" 
+					  ng-bind="vm.currentTable.dealerValue.low + '/'"></span>
+				<span ng-bind="vm.currentTable.dealerValue.hi"></span>
+				<span ng-show="!vm.currentTable.dealerValue">0</span>
+			</div>
 		</div>
 
 		<div class="aiCardContainer cardContainer">
@@ -10,7 +15,7 @@
 					 class="cardInContainer cardInAiContainer{{$index}}"
 					 index="$index"
 					 type="'ai'"
-					 suit="::aiCard.suit"
+					 suit="aiCard.suite+'_'+aiCard.text"
 					 ng-repeat="aiCard in vm.aiCards">
 				</div>
 			</div>
@@ -22,14 +27,19 @@
 					 class="cardInContainer cardInPlayerContainer{{$index}}"
 					 index="$index"
 					 type="'player'"
-					 suit="::playerCard.suit"
+					 suit="playerCard.suite+'_'+playerCard.text"
 					 ng-repeat="playerCard in vm.playerCards">
 				</div>
 			</div>
 		</div>
 
-		<div ng-show="vm.startGame">
-			<div class="pointsBubble pointsBubble-player"><span ng-show="vm.aiCards.length > 0 || vm.playerCards.length > 0">1/11</span></div>
+		<div>
+			<div class="pointsBubble pointsBubble-player">			
+				<span ng-show="vm.currentTable.handInfo.right.playerValue.low != vm.currentTable.handInfo.right.playerValue.hi" 
+					  ng-bind="vm.currentTable.handInfo.right.playerValue.low + '/'"></span>
+				<span ng-bind="vm.currentTable.handInfo.right.playerValue.hi"></span>
+				<span ng-show="!vm.currentTable.handInfo.right.playerValue">0</span>
+			</div>
 		</div>
 	</div>
 	<div class="tableBgWrap">
@@ -41,21 +51,17 @@
 			</div>
 			<img class="tableBgImg" src="images/tableBg.png" alt="">
 			<img class="chipBet bet-{{::chipImg}} {{vm.stage == 'game' ? 'chipBetIsDisabled' : ''}}" ng-click="vm.bet(chipImg)" ng-src="{{vm.getChipImg(chipImg)}}" alt="" ng-repeat="chipImg in [1,5,25,100]">
-			<!-- <img class="chipBet bet-1 {{vm.stage != 'game' ? 'chipBetIsDisabled' : ''}}" ng-click="vm.bet(1)" src="images/bet-1.png" alt="">
-			<img class="chipBet bet-5 {{vm.stage != 'game' ? 'chipBetIsDisabled' : ''}}" ng-click="vm.bet(5)" src="images/bet-5.png" alt="">
-			<img class="chipBet bet-25 {{vm.stage != 'game' ? 'chipBetIsDisabled' : ''}}" ng-click="vm.bet(25)" src="images/bet-25.png" alt="">
-			<img class="chipBet bet-100 {{vm.stage != 'game' ? 'chipBetIsDisabled' : ''}}" ng-click="vm.bet(100)" src="images/bet-100.png" alt=""> -->
 			<span class="betPoints" ng-bind='vm.betValue'></span>
 	</div>
 </div>
 <div class="buttonsPanel">
-	<div ng-show="vm.stage == 'game'">
-		<button class="splitBtn" ng-disabled="true">Split</button>
-		<button class="doubleBtn" ng-disabled="true">Double</button>
-		<button class="standBtn" ng-disabled="vm.btnsDisabled" ng-click="vm.createNewCardPlayer()">Hit</button>
-		<button class="standBtn" ng-disabled="vm.btnsDisabled" ng-click="vm.deal()"><i class="fa fa-check checkIcon" aria-hidden="true"></i> Stand</button>
+	<div ng-show="vm.stage != 'done'">
+		<button class="splitBtn" ng-disabled="!vm.availableActions.split">Split</button>
+		<button class="doubleBtn" ng-disabled="!vm.availableActions.double">Double</button>
+		<button class="standBtn" ng-disabled="!vm.availableActions.hit" ng-click="vm.hit()">Hit</button>
+		<button class="standBtn" ng-disabled="!vm.availableActions.stand" ng-click="vm.stand()"><i class="fa fa-check checkIcon" aria-hidden="true"></i> Stand</button>
 	</div>
-	<button class="standBtn" ng-disabled="vm.btnsDisabled" ng-click="vm.game()" ng-show="vm.stage == 'deal'">Deal</button>
+	<button class="standBtn" ng-disabled="vm.btnsDisabled" ng-click="vm.deal()" ng-show="vm.stage == 'done'">Deal</button>
 </div>
 <!-- <popup-menu></popup-menu> -->
 <!-- <div ng-include="popupTemplate.html"></div> -->
